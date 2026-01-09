@@ -1,11 +1,13 @@
-const container = document.querySelector('.container');
-const loginBtn = document.querySelector('.login-btn');
-const registerBtn = document.querySelector('.register-btn');
+const container = document.querySelector(".container");
+const loginToggle = document.querySelector(".toggle-login");
+const registerToggle = document.querySelector(".toggle-register");
 
-registerBtn.addEventListener('click', () => {
-  container.classList.add('active');
-});
+if (container && loginToggle && registerToggle) {
+  registerToggle.addEventListener("click", () => {
+    container.classList.add("active");
+  });
 
-loginBtn.addEventListener('click', () => {
-  container.classList.remove('active');
-});
+  loginToggle.addEventListener("click", () => {
+    container.classList.remove("active");
+  });
+}
